@@ -22,7 +22,10 @@
 - [x] GitHub 공개 저장소 생성
 - [x] 사용자 승인 후 커밋·푸시
 - [x] 07 페이지에 원문·다운로드 주소 연결
-- [ ] Claude 앱에서 최종 접근 테스트
+- [x] Claude 데스크톱 앱 Cowork + Claude in Chrome에서 공개 노션 접근 확인
+- [x] 웹 Cowork의 일반 페이지 가져오기 실패와 통합 Markdown 대체 경로 확인
+- [x] 공개 첫 화면·00 시작 안내·07 전달 페이지에 사용 경로 반영
+- [ ] Windows 환경의 Claude 데스크톱 앱 Cowork에서 최종 접근 테스트
 
 ## 산출물 위치
 
