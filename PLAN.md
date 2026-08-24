@@ -19,9 +19,9 @@
 - [x] 통합 문서 구조·안전 문구 검수
 - [x] 공식 Notion CLI 설치 및 로그인
 - [x] 한 번에 갱신하는 발행 스크립트 검증
-- [ ] GitHub 공개 저장소 생성
-- [ ] 사용자 승인 후 커밋·푸시
-- [ ] 07 페이지에 원문·다운로드 주소 연결
+- [x] GitHub 공개 저장소 생성
+- [x] 사용자 승인 후 커밋·푸시
+- [x] 07 페이지에 원문·다운로드 주소 연결
 - [ ] Claude 앱에서 최종 접근 테스트
 
 ## 산출물 위치
@@ -29,4 +29,5 @@
 - Notion 루트: https://solid-gerbil-a05.notion.site/i-conatus-AI-3c167fab50dd80ffb19fe3111d89630c
 - Notion 07: https://solid-gerbil-a05.notion.site/07-AI-3c667fab50dd81ff8385ec999d4679af
 - 통합 Markdown: `docs/i-conatus-ai-guide.md`
-- 공개 Markdown URL: 생성 전
+- GitHub 저장소: https://github.com/diamonds0821/i-conatus-ai-guide
+- 공개 Markdown URL: https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/i-conatus-ai-guide.md
