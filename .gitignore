@@ -1,0 +1,12 @@
+.*env*
+*.pem
+*.csv
+*.xlsx
+data/
+downloads/
+logs/
+output/
+__pycache__/
+node_modules/
+*.pdf
+
