@@ -25,6 +25,8 @@
 - [x] Claude 데스크톱 앱 Cowork + Claude in Chrome에서 공개 노션 접근 확인
 - [x] 웹 Cowork의 일반 페이지 가져오기 실패와 통합 Markdown 대체 경로 확인
 - [x] 공개 첫 화면·00 시작 안내·07 전달 페이지에 사용 경로 반영
+- [x] Windows용 VS Code 공식 다운로드·설치 절차 보강
+- [x] macOS 기준 Claude Code 시작·추가 설정 영상을 참고자료로 연결
 - [ ] Windows 환경의 Claude 데스크톱 앱 Cowork에서 최종 접근 테스트
 
 ## 산출물 위치
@@ -32,5 +34,7 @@
 - Notion 루트: https://solid-gerbil-a05.notion.site/i-conatus-AI-3c167fab50dd80ffb19fe3111d89630c
 - Notion 07: https://solid-gerbil-a05.notion.site/07-AI-3c667fab50dd81ff8385ec999d4679af
 - 통합 Markdown: `docs/i-conatus-ai-guide.md`
+- Claude Code 시작 참고 영상: `docs/assets/videos/vscode-claude-code-getting-started-macos.mp4`
+- Claude Code 추가 설정 영상: `docs/assets/videos/claude-code-additional-settings-macos.mp4`
 - GitHub 저장소: https://github.com/diamonds0821/i-conatus-ai-guide
 - 공개 Markdown URL: https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/i-conatus-ai-guide.md

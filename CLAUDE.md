@@ -19,6 +19,7 @@ Notion에서 관리하는 업무 자동화 가이드를 AI가 안정적으로 �
 ## 파일 구조
 
 - `docs/i-conatus-ai-guide.md`: AI에게 전달하는 통합 Markdown
+- `docs/assets/videos/`: 공개 가이드에서 연결하는 추가 영상 자료
 - `scripts/export_notion.py`: Notion 원본을 정해진 순서로 결합하는 발행 스크립트
 - `PLAN.md`: 구현 진행과 산출물 위치
 

@@ -302,8 +302,9 @@ Claude Code의 이용 가능 요금제와 계정 조건은 바뀔 수 있습니�
 VS Code는 원래 개발 작업에 많이 사용하는 프로그램이지만, 이 가이드에서는 **Claude Code를 업무 폴더와 연결하는 작업 공간**으로 사용합니다.
 코드를 직접 작성하거나 개발 기능을 모두 배울 필요는 없습니다. 처음에는 폴더 열기, 확장 프로그램 설치, Claude Code 대화창처럼 안내하는 몇 가지 기능만 사용합니다. AI가 만든 파일과 변경 내용을 한 화면에서 확인할 수 있다는 것도 VS Code를 사용하는 이유입니다.
 VS Code가 없다면 VS Code 설치 참고자료를 확인합니다.
-이 가이드에서는 공식 문서가 일반 사용자에게 권장하는 Windows용 **User Setup**을 기본으로 합니다. 이 방식은 보통 관리자 권한 없이 현재 사용자 계정에 설치됩니다.
-공식 출처: [VS Code Windows 설치 안내](https://code.visualstudio.com/docs/setup/windows)
+- 공식 다운로드: [Visual Studio Code 다운로드](https://code.visualstudio.com/download)
+- 공식 설치 안내: [Windows에서 VS Code 설치](https://code.visualstudio.com/docs/setup/windows)
+이 가이드에서는 공식 문서가 일반 사용자에게 권장하는 Windows용 **User Setup**을 기본으로 합니다. 이 방식은 보통 관리자 권한 없이 현재 사용자 계정에 설치됩니다. 내려받은 `.exe` 설치 파일을 실행하고, 잘 모르는 설치 옵션은 기본값을 유지한 채 설치를 완료합니다.
 ##### 완료 기준
 - 시작 메뉴에서 VS Code를 실행할 수 있습니다.
 - VS Code의 도움말 또는 정보 화면을 열 수 있습니다.
@@ -378,6 +379,12 @@ Auto가 보이지 않으면 임의로 권한 우회를 켜지 말고 **Manual**�
 - Claude Code가 현재 연 폴더를 인식합니다.
 - 빈 폴더라면 파일이 없다고 설명합니다.
 - 요청하지 않은 파일을 만들거나 수정하지 않았습니다.
+#### 추가 영상 자료 — macOS 참고
+> 이 가이드의 기본 환경은 Windows입니다. 아래 영상은 macOS에서 촬영되어 `⌘` 단축키, 메뉴 모양, 경로 표시가 Windows와 다를 수 있습니다. 설치와 로그인 흐름을 이해하는 보조자료로 사용하고, 실제 조작은 이 문서의 Windows 절차를 따릅니다.
+- [VS Code에서 Claude Code 시작하기 — macOS 참고 영상](https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/assets/videos/vscode-claude-code-getting-started-macos.mp4)
+	- 공식 확장 프로그램 확인, 설치, 화면 새로고침, 로그인, 첫 대화까지 보여줍니다.
+- [Claude Code 추가 설정 — macOS 참고 영상](https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/assets/videos/claude-code-additional-settings-macos.mp4)
+	- 모델 변경, Effort 변경, 계정과 사용량 확인처럼 처음 설치 후 선택적으로 확인할 설정을 보여줍니다.
 #### 10단계 — 0-B로 인계할 준비 확인
 Claude 채팅은 지금까지의 진행 결과를 다음 형식으로 정리합니다.
 ```plain text
@@ -4662,9 +4669,13 @@ Windows 에디션/버전: Windows 11, 24H2
 3. 회사·학교 관리 PC이거나 설치 권한이 없다면 설치를 진행하지 않습니다.
 4. 독자가 현재 보고 있는 화면을 확인한 뒤 한 번에 한 단계만 안내합니다.
 #### 설치 순서
-##### 1. 공식 페이지 열기
-[VS Code Windows 설치 공식 안내](https://code.visualstudio.com/docs/setup/windows)를 엽니다.
-AI는 독자에게 주소창의 도메인이 `code.visualstudio.com`인지 확인하도록 안내합니다.  
+##### 1. 공식 다운로드 페이지 열기
+- 다운로드: [Visual Studio Code 공식 다운로드](https://code.visualstudio.com/download)
+- 설치 안내: [Windows에서 VS Code 설치](https://code.visualstudio.com/docs/setup/windows)
+1. 공식 다운로드 페이지를 엽니다.
+2. 주소창의 도메인이 `code.visualstudio.com`인지 확인합니다.
+3. Windows 항목에서 내 PC에 맞는 **User Installer**를 선택합니다.
+4. 브라우저의 다운로드 목록에서 `VSCodeUserSetup`으로 시작하는 `.exe` 파일을 확인합니다.
 광고나 비공식 다운로드 사이트에서는 설치 파일을 받지 않습니다.
 ##### 2. 설치 파일 선택하기
 일반적인 개인용 Windows PC라면 **User Setup**을 우선 선택합니다.
@@ -4673,11 +4684,13 @@ AI는 독자에게 주소창의 도메인이 `code.visualstudio.com`인지 확�
 - 회사·학교 PC: 임의로 선택하지 말고 담당자의 설치 기준을 확인
 User Setup은 일반적으로 관리자 권한 없이 설치할 수 있어 초보자에게 적합합니다. 다만 조직의 보안 정책이 있으면 그 정책이 우선입니다.
 ##### 3. 설치하기
-1. 내려받은 설치 파일을 실행합니다.
-2. 사용권 계약을 확인하고 설치를 진행합니다.
-3. 설치 옵션을 잘 모르겠다면 기본값을 유지합니다.
-4. **PATH에 추가(Add to PATH)** 항목이 보이면 선택 상태를 유지합니다.
-5. 설치를 완료합니다.
+1. 브라우저의 다운로드 목록 또는 Windows의 **다운로드** 폴더에서 내려받은 `.exe` 설치 파일을 실행합니다.
+2. Windows가 실행 여부를 묻는다면 게시자가 Microsoft인지 확인한 뒤 진행합니다.
+3. 사용권 계약을 확인하고 설치를 진행합니다.
+4. 설치 위치와 시작 메뉴 폴더를 잘 모르겠다면 기본값을 유지합니다.
+5. **PATH에 추가(Add to PATH)** 항목이 보이면 선택 상태를 유지합니다.
+6. **설치(Install)**를 선택하고 완료될 때까지 기다립니다.
+7. 설치가 끝나면 **Visual Studio Code 실행**을 선택하거나 시작 메뉴에서 VS Code를 실행합니다.
 > 설치 중 관리자 암호나 조직의 승인 화면이 나타나면 우회하지 말고 멈춥니다.
 ##### 4. 프로그램을 완전히 다시 열기
 설치가 끝난 뒤 기존에 열려 있던 명령 프롬프트, PowerShell, Windows Terminal은 새 설정을 바로 인식하지 못할 수 있습니다.
@@ -4725,6 +4738,7 @@ AI는 다음 형식으로만 정리합니다.
 다운로드 전에는 공식 도메인과 내 시스템 종류를 확인하고, 관리자 권한이나 조직 제한이 나오면 우회하지 말고 멈춰줘.
 ```
 #### 공식 참고자료
+- Microsoft VS Code: [공식 다운로드](https://code.visualstudio.com/download)
 - Microsoft VS Code: [Windows에서 VS Code 설치](https://code.visualstudio.com/docs/setup/windows)
 > 설치 화면과 최소 요구 버전은 바뀔 수 있습니다. AI는 실행 시점에 공식 문서를 다시 확인해야 합니다.
 

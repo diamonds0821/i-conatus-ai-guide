@@ -56,6 +56,7 @@ https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/i-co
 
 - Notion은 편집·관리 원본입니다.
 - `docs/i-conatus-ai-guide.md`는 AI에게 전달하는 배포본입니다.
+- `docs/assets/videos/`에는 배포본과 Notion에서 연결하는 공개 추가 영상이 있습니다.
 - 배포본은 여러 파일로 나누지 않습니다.
 - PDF는 통합 Markdown에서 다시 만들 수 있는 선택 산출물입니다.
 
