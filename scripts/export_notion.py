@@ -17,10 +17,6 @@ CLI_PATH = shutil.which("ntn") or str(Path.home() / ".local" / "bin" / "ntn")
 
 PAGES = [
     ("00 시작 안내", "3c167fab-50dd-8111-ade7-d2e7237bd9b8", 2),
-    ("01 시작 준비편", "3c167fab-50dd-8125-ba35-e6afbaff043b", 2),
-    ("0-A Claude 채팅과 설치하기", "3c167fab-50dd-81c6-936f-ed47a1875391", 3),
-    ("0-B Claude Code로 인계하기", "3c167fab-50dd-8132-b7a2-f1360a7fc527", 3),
-    ("준비 완료 체크리스트", "3c167fab-50dd-8170-be29-ffaf8b9096f1", 3),
     ("02 시리즈 1 — Claude Code와 일하는 법", "3c167fab-50dd-8183-8779-f5c96f6ad614", 2),
     ("1장. Claude Code에 일을 맡기기 전에", "3c167fab-50dd-8116-aded-cd800e840431", 3),
     ("2장. 좋은 질문에 필요한 네 가지", "3c167fab-50dd-8185-8eff-c75363639d72", 3),
@@ -61,7 +57,7 @@ PAGES = [
     ("VS Code에서 Claude Code 사용", "3c167fab-50dd-81a3-bcb2-d5f08edb7854", 3),
     ("모바일 Remote Control", "3c167fab-50dd-814a-915f-fc22ae1eb96e", 3),
     ("오류가 발생했을 때", "3c167fab-50dd-8171-b717-d183f2ffdaca", 3),
-    ("06 기존 공개 가이드", "3c167fab-50dd-814b-86b1-e4e620e37bbd", 2),
+    ("06 선택 실습 — 화면 녹화와 HAR로 웹 업무 자동화하기", "3c167fab-50dd-814b-86b1-e4e620e37bbd", 2),
 ]
 
 HEADER = """---
