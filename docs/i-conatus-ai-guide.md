@@ -4214,9 +4214,9 @@ AI는 다음 형식으로만 정리합니다.
 한 번에 한 단계만 말하고, 내가 완료했다고 답하면 다음 단계로 넘어가.
 다운로드 전에는 공식 도메인과 내 시스템 종류를 확인하고, 관리자 권한이나 조직 제한이 나오면 우회하지 말고 멈춰줘.
 ```
-#### 공식 참고자료
+#### 공식 참고자료 (배경 정보용 — 설치는 위 다운로드 링크만 사용)
 - Microsoft VS Code: [공식 다운로드](https://code.visualstudio.com/download)
-- Microsoft VS Code: [Windows에서 VS Code 설치](https://code.visualstudio.com/docs/setup/windows)
+- Microsoft VS Code: [Windows에서 VS Code 설치](https://code.visualstudio.com/docs/setup/windows) — 이 문서 페이지는 큰 다운로드 버튼이 없습니다. 설치할 때는 이 링크로 보내지 마세요.
 > 설치 화면과 최소 요구 버전은 바뀔 수 있습니다. AI는 실행 시점에 공식 문서를 다시 확인해야 합니다.
 
 ---
@@ -4407,9 +4407,9 @@ Auto는 분류기가 대부분의 행동을 검토해 반복적인 승인창을 
 로그인 후에는 파일을 바꾸지 말고 읽기 전용 첫 질문으로 연결만 확인해줘.
 각 안내의 첫 줄에 [VS Code], [Claude 채팅], [터미널], [브라우저] 중 입력하거나 클릭할 위치를 표시해줘.
 ```
-#### 공식 참고자료
+#### 공식 참고자료 (배경 정보용)
 - Anthropic: [VS Code에서 Claude Code 사용](https://code.claude.com/docs/en/ide-integrations)
-- Anthropic: [Claude Code 설치](https://code.claude.com/docs/en/installation)
+- Anthropic: [Claude Code 설치](https://code.claude.com/docs/en/installation) — 이 페이지는 명령줄(CLI) 설치도 다룹니다. 비개발자에게는 보내지 말고, 이 가이드의 위 본문(VS Code 확장 프로그램 설치)만 따르게 하세요.
 > 확장 프로그램 이름, 요구 버전, 로그인 방식은 바뀔 수 있습니다. 실행 시점의 공식 문서와 실제 화면을 우선합니다.
 
 ---
