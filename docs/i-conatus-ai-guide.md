@@ -4148,10 +4148,10 @@ Windows 에디션/버전: Windows 11, 24H2
 #### 설치 순서
 ##### 1. 공식 다운로드 페이지 열기
 - 다운로드: [Visual Studio Code 공식 다운로드](https://code.visualstudio.com/download)
-- 설치 안내: [Windows에서 VS Code 설치](https://code.visualstudio.com/docs/setup/windows)
-1. 공식 다운로드 페이지를 엽니다.
+> 이 다운로드 링크로 곧바로 이동합니다. 검색 결과나 설치 안내 문서 페이지(`/docs/setup/windows`)를 먼저 거치지 않습니다 — 그 페이지에는 큰 다운로드 버튼이 없어 헷갈릴 수 있습니다.
+1. 위 다운로드 링크를 엽니다.
 2. 주소창의 도메인이 `code.visualstudio.com`인지 확인합니다.
-3. Windows 항목에서 내 PC에 맞는 **User Installer**를 선택합니다.
+3. 페이지 중앙의 큰 **Windows** 버튼을 클릭합니다. Windows 10·11 x64 PC라면 이 버튼 하나로 충분합니다. ARM64 PC라면 버튼 아래의 **User Installer Arm64** 링크를 따로 선택합니다.
 4. 브라우저의 다운로드 목록에서 `VSCodeUserSetup`으로 시작하는 `.exe` 파일을 확인합니다.
 광고나 비공식 다운로드 사이트에서는 설치 파일을 받지 않습니다.
 ##### 2. 설치 파일 선택하기
