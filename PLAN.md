@@ -37,6 +37,8 @@
 - [ ] Windows 환경의 Claude 데스크톱 앱 Cowork에서 최종 접근 테스트
 - [ ] 두 Markdown 재생성 후 새 루트 구조와의 정합성 확인
 - [x] VS Code 설치→확장 검색·설치→로그인 연결 실행 영상 편집 완료 후 게시 — `docs/assets/videos/vscode-claude-code-getting-started-macos.mp4`로 이미 완성·05/Claude Code 설치 페이지에 연결 확인 완료 (2026-08-28 재확인)
+- [x] 루트 페이지를 "2단계로 시작하는 AI 자동화" 부제 + 1단계/2단계 구조로 재구성 (기존 "이렇게 진행됩니다"·"(참고) AI가 진행하는 순서" 중복 섹션 삭제, 나머지는 "더 알고 싶다면"으로 하단 이동) (2026-08-28)
+- [x] GitHub blob 뷰어 동영상 미리보기 실패("we can't show files that are this big") 해결 — GitHub Pages 활성화(`https://diamonds0821.github.io/i-conatus-ai-guide/`)로 영상 링크 전환, 브라우저에서 바로 재생 확인 (2026-08-28)
 
 ## 산출물 위치
 

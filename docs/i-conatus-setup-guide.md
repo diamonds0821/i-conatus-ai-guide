@@ -332,7 +332,7 @@ Claude Code를 사용하는 방법은 여러 가지지만 이 가이드는 **VS 
 3. Claude Code 패널이 자동으로 열리지 않으면 VS Code를 완전히 닫고 다시 엽니다.
 4. 그래도 보이지 않으면 명령 팔레트(`Ctrl+Shift+P`)에서 `Claude Code`를 검색합니다.
 > 확장 프로그램이 요구하는 VS Code 최소 버전을 충족하지 못하면, 비공식 파일을 찾지 말고 VS Code 공식 업데이트를 먼저 검토합니다.
-> 📹 **참고 영상**: [VS Code에서 Claude Code 시작하기 — macOS 참고 영상](https://github.com/diamonds0821/i-conatus-ai-guide/blob/main/docs/assets/videos/vscode-claude-code-getting-started-macos.mp4)
+> 📹 **참고 영상**: [VS Code에서 Claude Code 시작하기 — macOS 참고 영상](https://diamonds0821.github.io/i-conatus-ai-guide/docs/assets/videos/vscode-claude-code-getting-started-macos.mp4)
 > 이 가이드의 기본 환경은 Windows입니다. 영상은 macOS에서 촬영되어 단축키·메뉴 모양이 다를 수 있습니다. 설치와 로그인 흐름을 이해하는 보조자료로만 사용하고, 실제 조작은 이 문서의 Windows 절차를 따릅니다.
 ### 4. 로그인하기
 1. Claude Code 패널의 로그인 안내를 누릅니다.
@@ -362,7 +362,7 @@ AI는 독자에게 무엇을 입력하라고 할 때마다 입력 위치를 먼�
 3. **Edit automatically** 또는 **권한 우회(Bypass permissions)**가 선택되지 않았는지 확인합니다.
 4. Auto가 보이지 않으면 Manual을 사용하고 계정·버전·조직 정책을 공식 문서에서 확인합니다.
 Auto는 분류기가 대부분의 행동을 검토해 반복적인 승인창을 줄이는 모드입니다. 그러나 해당 행동을 기술적으로 모두 차단하거나 안전을 보장하는 설정은 아닙니다. 파일 삭제·원본 덮어쓰기·작업 폴더 밖 접근·개인정보 업로드·외부 전송·결제·로그인·권한 변경처럼 민감한 작업을 시작하기 전에는 **Manual 또는 Plan** 모드로 전환하고 사용자가 직접 확인합니다.
-> 📹 **참고 영상**: [Claude Code 추가 설정 — macOS 참고 영상](https://github.com/diamonds0821/i-conatus-ai-guide/blob/main/docs/assets/videos/claude-code-additional-settings-macos.mp4)
+> 📹 **참고 영상**: [Claude Code 추가 설정 — macOS 참고 영상](https://diamonds0821.github.io/i-conatus-ai-guide/docs/assets/videos/claude-code-additional-settings-macos.mp4)
 > 권한 모드, 알림, 그 밖의 기본 설정 화면을 보여주는 macOS 참고 영상입니다. 메뉴 위치는 Windows와 다를 수 있으니 실제 조작은 이 문서 기준으로 합니다.
 ### 완료 체크리스트
 - [ ] VS Code 확장 프로그램 화면을 열었다.
