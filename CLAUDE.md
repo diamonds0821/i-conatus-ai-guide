@@ -2,13 +2,13 @@
 
 ## 프로젝트 목적
 
-Notion에서 관리하는 업무 자동화 가이드를 AI가 안정적으로 읽을 수 있는 단일 Markdown 문서로 발행한다.
+Notion에서 관리하는 업무 자동화 가이드를 AI가 안정적으로 읽을 수 있는 Markdown 문서로 발행한다.
 
 ## 핵심 원칙
 
 - 저자는 모든 문서에서 `i.conatus`로 표기한다.
 - 독자는 Windows를 사용하는 비개발자다.
-- Notion은 편집·관리 원본이고, `docs/i-conatus-ai-guide.md`는 AI가 노션을 읽지 못할 때 사용하는 통합 배포본이다.
+- Notion은 편집·관리 원본이고, `docs/i-conatus-setup-guide.md`(설치)와 `docs/i-conatus-work-guide.md`(작업)는 AI가 노션을 읽지 못할 때 사용하는 배포본이다. 두 파일은 의도적으로 분리한다 — 설치를 돕는 AI는 시리즈 1·2·3 내용을 몰라도 되고, 이미 설치가 끝난 Claude Code는 설치 절차를 다시 읽을 필요가 없다. 설치 가이드 끝에는 항상 작업 가이드로 넘어가는 인계 프롬프트가 포함된다.
 - 노션을 AI에게 직접 전달할 때는 Claude 데스크톱 앱의 Cowork와 Claude in Chrome을 기본 경로로 안내한다.
 - 웹 Cowork와 데스크톱 앱 Cowork가 같은 방식으로 노션을 읽는다고 가정하지 않는다.
 - 배포본에는 `99 제작·발행 관리`를 포함하지 않는다. 이 페이지는 공개 트리 밖(개인 허브 페이지 하위)으로 이동해 관리한다.
@@ -19,14 +19,15 @@ Notion에서 관리하는 업무 자동화 가이드를 AI가 안정적으로 �
 
 ## 파일 구조
 
-- `docs/i-conatus-ai-guide.md`: AI에게 전달하는 통합 Markdown
+- `docs/i-conatus-setup-guide.md`: 설치를 돕는 아무 AI에게 전달하는 Markdown (계정 확인 → VS Code 설치 → 확장 설치 → 로그인·연결)
+- `docs/i-conatus-work-guide.md`: VS Code의 Claude Code에게 전달하는 Markdown (작업 폴더 만들기 → 시리즈 1·2·3)
 - `docs/assets/videos/`: 공개 가이드에서 연결하는 추가 영상 자료
-- `scripts/export_notion.py`: Notion 원본을 정해진 순서로 결합하는 발행 스크립트
+- `scripts/export_notion.py`: Notion 원본을 정해진 순서로 결합해 두 Markdown을 함께 발행하는 스크립트
 - `PLAN.md`: 구현 진행과 산출물 위치
 
 ## 변경할 때
 
 1. Notion 원본을 먼저 수정한다.
-2. 발행 스크립트로 통합 Markdown을 다시 만든다.
-3. 문서 구조와 안전 문구를 검수한다.
+2. 발행 스크립트로 두 Markdown을 다시 만든다.
+3. 문서 구조와 안전 문구를 검수한다 (특히 설치 가이드 끝의 인계 프롬프트가 작업 가이드 URL을 정확히 가리키는지).
 4. 사용자 승인 후 커밋·푸시한다.

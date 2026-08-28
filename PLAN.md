@@ -33,15 +33,19 @@
 - [x] 00을 "AI 행동 원칙"만 남기고 설치 흐름 설명(사용법·진행순서·페이지바로가기)은 정리
 - [x] 01 시작 준비편(0-A/0-B/체크리스트)을 개인 허브 페이지 하위로 이동 — 05 참고자료와 새 루트 흐름으로 대체됨
 - [x] export_notion.py PAGES에서 01 관련 4개 항목 제거 (통합 Markdown에서도 제외)
+- [x] 통합 Markdown 하나를 설치 가이드 / 작업 가이드 두 개로 분리 (export_notion.py, 루트 페이지, 07 페이지 반영)
 - [ ] Windows 환경의 Claude 데스크톱 앱 Cowork에서 최종 접근 테스트
-- [ ] 통합 Markdown 재생성 후 새 루트 구조와의 정합성 확인
+- [ ] 두 Markdown 재생성 후 새 루트 구조와의 정합성 확인
+- [ ] VS Code 설치→확장 검색·설치→로그인 연결 실행 영상 편집 완료 후 게시
 
 ## 산출물 위치
 
 - Notion 루트: https://solid-gerbil-a05.notion.site/i-conatus-AI-3c167fab50dd80ffb19fe3111d89630c
 - Notion 07: https://solid-gerbil-a05.notion.site/07-AI-3c667fab50dd81ff8385ec999d4679af
-- 통합 Markdown: `docs/i-conatus-ai-guide.md`
+- 설치 가이드: `docs/i-conatus-setup-guide.md`
+- 작업 가이드: `docs/i-conatus-work-guide.md`
 - Claude Code 시작 참고 영상: `docs/assets/videos/vscode-claude-code-getting-started-macos.mp4`
 - Claude Code 추가 설정 영상: `docs/assets/videos/claude-code-additional-settings-macos.mp4`
 - GitHub 저장소: https://github.com/diamonds0821/i-conatus-ai-guide
-- 공개 Markdown URL: https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/i-conatus-ai-guide.md
+- 설치 가이드 URL: https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/i-conatus-setup-guide.md
+- 작업 가이드 URL: https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/main/docs/i-conatus-work-guide.md

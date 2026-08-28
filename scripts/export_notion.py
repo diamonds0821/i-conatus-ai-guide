@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Notion 가이드를 AI용 단일 Markdown으로 발행한다."""
+"""Notion 가이드를 AI용 Markdown 두 개(설치 가이드 / 작업 가이드)로 발행한다."""
 
 from __future__ import annotations
 
@@ -12,11 +12,24 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_PATH = PROJECT_ROOT / "docs" / "i-conatus-ai-guide.md"
+SETUP_OUTPUT_PATH = PROJECT_ROOT / "docs" / "i-conatus-setup-guide.md"
+WORK_OUTPUT_PATH = PROJECT_ROOT / "docs" / "i-conatus-work-guide.md"
 CLI_PATH = shutil.which("ntn") or str(Path.home() / ".local" / "bin" / "ntn")
 
-PAGES = [
+WORK_GUIDE_RAW_URL = (
+    "https://raw.githubusercontent.com/diamonds0821/i-conatus-ai-guide/"
+    "main/docs/i-conatus-work-guide.md"
+)
+
+SETUP_PAGES = [
     ("00 시작 안내", "3c167fab-50dd-8111-ade7-d2e7237bd9b8", 2),
+    ("Windows 환경 확인", "3c167fab-50dd-819e-b750-f73f009512cd", 2),
+    ("VS Code 설치", "3c167fab-50dd-81ac-a201-f43f44170260", 2),
+    ("Claude Code 설치", "3c167fab-50dd-818a-b461-d0ab2194561f", 2),
+    ("VS Code에서 Claude Code 사용", "3c167fab-50dd-81a3-bcb2-d5f08edb7854", 2),
+]
+
+WORK_PAGES = [
     ("02 시리즈 1 — Claude Code와 일하는 법", "3c167fab-50dd-8183-8779-f5c96f6ad614", 2),
     ("1장. Claude Code에 일을 맡기기 전에", "3c167fab-50dd-8116-aded-cd800e840431", 3),
     ("2장. 좋은 질문에 필요한 네 가지", "3c167fab-50dd-8185-8eff-c75363639d72", 3),
@@ -49,27 +62,23 @@ PAGES = [
     ("8장 — 사고가 발생했을 때 중단하고 기록하기", "3c667fab-50dd-8109-bbeb-cdfea48f82b3", 3),
     ("9장 — 검증된 범위만 단계적으로 확대하기", "3c667fab-50dd-81d7-b90c-ec3e5ed6a796", 3),
     ("최종 실습 — 안전한 자동화 운영서 만들기", "3c667fab-50dd-81e0-b46e-fd1b2a076347", 3),
-    ("05 AI가 확인할 참고자료", "3c167fab-50dd-81d6-83e1-e48b9692856a", 2),
-    ("Windows 환경 확인", "3c167fab-50dd-819e-b750-f73f009512cd", 3),
-    ("VS Code 설치", "3c167fab-50dd-81ac-a201-f43f44170260", 3),
-    ("Git for Windows 설치", "3c167fab-50dd-81ea-8ae9-d677b0aae084", 3),
-    ("Claude Code 설치", "3c167fab-50dd-818a-b461-d0ab2194561f", 3),
-    ("VS Code에서 Claude Code 사용", "3c167fab-50dd-81a3-bcb2-d5f08edb7854", 3),
-    ("모바일 Remote Control", "3c167fab-50dd-814a-915f-fc22ae1eb96e", 3),
-    ("오류가 발생했을 때", "3c167fab-50dd-8171-b717-d183f2ffdaca", 3),
+    ("Git for Windows 설치", "3c167fab-50dd-81ea-8ae9-d677b0aae084", 2),
+    ("모바일 Remote Control", "3c167fab-50dd-814a-915f-fc22ae1eb96e", 2),
+    ("오류가 발생했을 때", "3c167fab-50dd-8171-b717-d183f2ffdaca", 2),
     ("06 선택 실습 — 화면 녹화와 HAR로 웹 업무 자동화하기", "3c167fab-50dd-814b-86b1-e4e620e37bbd", 2),
 ]
 
-HEADER = """---
+SETUP_HEADER = """---
 카테고리: AI WORK AUTOMATION GUIDE
-부제: Windows 비개발자가 AI와 함께 시작하는 업무 자동화
+부제: Windows 비개발자가 AI와 함께 시작하는 업무 자동화 — 설치 가이드
 저자: i.conatus
-꼬리말: i.conatus | AI 업무 자동화 가이드
+꼬리말: i.conatus | 설치 가이드
 ---
 
-# i.conatus | AI 업무 자동화 가이드
+# i.conatus | 설치 가이드
 
-> **이 문서는 사람과 AI가 함께 사용하는 통합 가이드입니다.**
+> **이 문서는 아직 Claude Code가 없는 상태에서, 지금 쓰고 있는 아무 AI 채팅에게 주는 문서입니다.**
+> VS Code 설치부터 Claude Code 확장 프로그램 로그인·연결까지만 다룹니다. 실제 업무 자동화 내용은 여기 없습니다.
 
 ## 이 문서를 읽는 AI에게
 
@@ -77,24 +86,89 @@ HEADER = """---
 
 1. 문서 전체의 목적과 진행 순서를 먼저 파악합니다.
 2. 사용자가 Windows를 사용하는 비개발자라고 가정하고 전문 용어를 쉽게 설명합니다.
-3. 사용자의 현재 상태와 하려는 업무를 먼저 질문합니다.
+3. 사용자의 현재 상태를 먼저 질문합니다.
 4. 한 번에 한 단계만 안내하고 완료 기준을 확인한 뒤 다음 단계로 이동합니다.
 5. 명령어를 제시할 때 입력 위치·목적·예상되는 변화를 함께 설명합니다.
 6. 삭제·덮어쓰기·개인정보 업로드·외부 전송·결제·계정·권한 변경은 사용자의 명시적인 승인을 기다립니다.
 7. 비밀번호·API 키·인증번호를 채팅에 입력하도록 요청하지 않습니다.
-8. 확인하지 못한 내용은 추측하지 않고 ‘확인 필요’라고 표시합니다.
+8. 확인하지 못한 내용은 추측하지 않고 '확인 필요'라고 표시합니다.
 9. 공식 문서와 이 가이드가 다르면 공식 문서를 우선하고 차이를 설명합니다.
 10. 같은 오류가 세 번 반복되면 멈추고 원인을 다시 확인합니다.
 
 ## 처음 보고할 내용
 
-사용자에게 다음 다섯 가지만 먼저 보고합니다.
+사용자에게 다음 내용만 먼저 보고합니다.
 
-1. 사용자가 거쳐야 할 전체 단계
+1. 사용자가 거쳐야 할 전체 단계 (계정 확인 → VS Code 설치 → 확장 프로그램 설치 → 로그인 · 연결)
 2. 현재 상태를 확인하기 위한 질문
 3. 설치나 설정 변경이 필요한 항목
 4. 사람의 승인이 필요한 항목
 5. 지금 시작해야 할 첫 번째 단계
+
+이 문서에는 시리즈 1·2·3 같은 실제 업무 자동화 내용이 없습니다. 로그인과 연결이 끝나면 이 문서의 역할은 끝나고, 아래 "로그인·연결이 끝난 뒤 반드시 할 일"로 넘어갑니다.
+
+---
+
+"""
+
+SETUP_FOOTER = f"""
+
+---
+
+## 로그인·연결이 끝난 뒤 반드시 할 일
+
+Claude Code 로그인과 권한 모드(Auto) 설정까지 확인됐으면, 이 설치 가이드의 역할은 끝입니다. 사용자에게 아래 문장을 그대로 알려주고, 이번엔 **VS Code 안의 Claude Code 채팅창**에 붙여넣으라고 안내하세요. 지금부터는 이 문서가 아니라 작업 가이드가 안내를 이어갑니다.
+
+```plain text
+아래 가이드를 전체적으로 읽어줘.
+
+{WORK_GUIDE_RAW_URL}
+
+아직 파일을 만들거나 설정을 바꾸지 마.
+먼저 내 현재 상태와 하려는 업무를 질문해줘.
+
+나는 비개발자야.
+전문 용어는 쉽게 설명하고, 한 번에 한 단계씩 진행해줘.
+중요한 변경은 반드시 내 승인을 받아줘.
+```
+"""
+
+WORK_HEADER = """---
+카테고리: AI WORK AUTOMATION GUIDE
+부제: Windows 비개발자가 AI와 함께 시작하는 업무 자동화 — 작업 가이드
+저자: i.conatus
+꼬리말: i.conatus | 작업 가이드
+---
+
+# i.conatus | 작업 가이드
+
+> **이 문서는 VS Code 안의 Claude Code가 직접 읽는 문서입니다.**
+> 설치와 로그인은 이미 끝난 상태에서 시작합니다. 아직 설치가 안 됐다면 이 문서가 아니라 설치 가이드를 먼저 진행해야 합니다.
+
+## 이 문서를 읽는 Claude Code에게
+
+1. 문서 전체의 목적과 진행 순서를 먼저 파악합니다.
+2. 사용자가 Windows를 사용하는 비개발자라고 가정하고 전문 용어를 쉽게 설명합니다.
+3. 사용자의 현재 상태와 하려는 업무를 먼저 질문합니다.
+4. 한 번에 한 단계만 안내하고 완료 기준을 확인한 뒤 다음 단계로 이동합니다.
+5. 삭제·덮어쓰기·개인정보 업로드·외부 전송·결제·계정·권한 변경은 사용자의 명시적인 승인을 기다립니다.
+6. 확인하지 못한 내용은 추측하지 않고 '확인 필요'라고 표시합니다.
+7. 같은 오류가 세 번 반복되면 멈추고 원인을 다시 확인합니다.
+
+## 가장 먼저 할 일 — 업무 자동화 전용 폴더 만들기
+
+시리즈로 넘어가기 전에, 아직 업무 자동화 전용 폴더가 없다면 먼저 만들고 엽니다. 이미 전용 폴더에서 대화 중이면 이 단계는 건너뜁니다.
+
+1. 사용자에게 기존 업무자료가 들어 있는 폴더를 바로 쓰지 말라고 안내합니다. 문서나 바탕 화면처럼 찾기 쉬운 위치에 새 빈 폴더를 만들도록 안내합니다 (예: `업무자동화`). 폴더 이름에 고객명·비밀번호·주민등록번호 같은 민감정보를 넣지 않습니다.
+2. **[VS Code에서 할 일]** 상단 메뉴 `File → Open Folder` → 방금 만든 폴더 선택 → 신뢰 여부를 묻는 창이 나오면 직접 만든 빈 폴더가 맞는지 확인한 뒤 신뢰합니다.
+3. 왼쪽 탐색기에 그 폴더 이름이 보이는지 확인합니다.
+4. 확인되면 아래 문장만 입력해 첫 연결을 확인합니다.
+   ```plain text
+   지금 열려 있는 작업 폴더의 이름과 보이는 파일 개수만 알려줘.
+   아직 파일을 만들거나 수정하거나 명령을 실행하지 마.
+   ```
+
+폴더 확인이 끝나면 아래 시리즈 1부터 순서대로 진행합니다.
 
 ---
 
@@ -170,12 +244,26 @@ def clean_page(markdown: str, title: str, level: int) -> str:
     return f'{"#" * level} {title}\n\n{body}'
 
 
-def build_guide() -> str:
+def build_doc(pages: list[tuple[str, str, int]], header: str, footer: str = "") -> str:
     sections = []
-    for index, (title, page_id, level) in enumerate(PAGES, start=1):
-        print(f"[{index}/{len(PAGES)}] {title}")
+    for index, (title, page_id, level) in enumerate(pages, start=1):
+        print(f"[{index}/{len(pages)}] {title}")
         sections.append(clean_page(fetch_page(page_id), title, level))
-    return HEADER + "\n\n---\n\n".join(sections) + "\n"
+    return header + "\n\n---\n\n".join(sections) + "\n" + footer
+
+
+def write_output(content: str, output_path: Path) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile(
+        mode="w",
+        encoding="utf-8",
+        dir=output_path.parent,
+        delete=False,
+    ) as temporary:
+        temporary.write(content)
+        temporary_path = Path(temporary.name)
+    temporary_path.replace(output_path)
+    print(f"완료: {output_path}")
 
 
 def main() -> None:
@@ -185,20 +273,13 @@ def main() -> None:
             "설치와 로그인을 완료한 뒤 다시 실행하세요."
         )
 
-    guide = build_guide()
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    print("=== 설치 가이드 ===")
+    setup_guide = build_doc(SETUP_PAGES, SETUP_HEADER, SETUP_FOOTER)
+    write_output(setup_guide, SETUP_OUTPUT_PATH)
 
-    with tempfile.NamedTemporaryFile(
-        mode="w",
-        encoding="utf-8",
-        dir=OUTPUT_PATH.parent,
-        delete=False,
-    ) as temporary:
-        temporary.write(guide)
-        temporary_path = Path(temporary.name)
-
-    temporary_path.replace(OUTPUT_PATH)
-    print(f"완료: {OUTPUT_PATH}")
+    print("=== 작업 가이드 ===")
+    work_guide = build_doc(WORK_PAGES, WORK_HEADER)
+    write_output(work_guide, WORK_OUTPUT_PATH)
 
 
 if __name__ == "__main__":
