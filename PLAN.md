@@ -39,6 +39,7 @@
 - [x] VS Code 설치→확장 검색·설치→로그인 연결 실행 영상 편집 완료 후 게시 — `docs/assets/videos/vscode-claude-code-getting-started-macos.mp4`로 이미 완성·05/Claude Code 설치 페이지에 연결 확인 완료 (2026-08-28 재확인)
 - [x] 루트 페이지를 "2단계로 시작하는 AI 자동화" 부제 + 1단계/2단계 구조로 재구성 (기존 "이렇게 진행됩니다"·"(참고) AI가 진행하는 순서" 중복 섹션 삭제, 나머지는 "더 알고 싶다면"으로 하단 이동) (2026-08-28)
 - [x] GitHub blob 뷰어 동영상 미리보기 실패("we can't show files that are this big") 해결 — GitHub Pages 활성화(`https://diamonds0821.github.io/i-conatus-ai-guide/`)로 영상 링크 전환, 브라우저에서 바로 재생 확인 (2026-08-28)
+- [x] 07 페이지가 루트 1단계와 겹쳐 "방법 1/2/3 + 루트 프롬프트 = 4개"로 헷갈리던 문제 해결 — 07을 "루트 1단계가 막혔을 때만 보는 예외 대응"으로 재정의, 중복되던 방법2(통합 Markdown 주소) 삭제 (2026-08-28)
 
 ## 산출물 위치
 
