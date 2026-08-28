@@ -36,7 +36,7 @@
 - [x] 통합 Markdown 하나를 설치 가이드 / 작업 가이드 두 개로 분리 (export_notion.py, 루트 페이지, 07 페이지 반영)
 - [ ] Windows 환경의 Claude 데스크톱 앱 Cowork에서 최종 접근 테스트
 - [ ] 두 Markdown 재생성 후 새 루트 구조와의 정합성 확인
-- [ ] VS Code 설치→확장 검색·설치→로그인 연결 실행 영상 편집 완료 후 게시
+- [x] VS Code 설치→확장 검색·설치→로그인 연결 실행 영상 편집 완료 후 게시 — `docs/assets/videos/vscode-claude-code-getting-started-macos.mp4`로 이미 완성·05/Claude Code 설치 페이지에 연결 확인 완료 (2026-08-28 재확인)
 
 ## 산출물 위치
 
